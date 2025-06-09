@@ -1,1 +1,446 @@
-/* Add you CSS here */
+/* Set a vibrant, modern background and base font */
+body {
+  /* Add a more colorful gradient for energy */
+  background: linear-gradient(135deg, #232526 0%, #38c6ff 60%, #4f8cff 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #f5f7fa;
+  /* Add a subtle pattern overlay for depth */
+  background-attachment: fixed;
+}
+
+/* Navigation bar styles */
+nav {
+  width: 100%;
+  background: rgba(24,26,27,0.95);
+  box-shadow: 0 2px 16px rgba(56,198,255,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px); /* Modern glass effect */
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+}
+nav a {
+  text-decoration: none;
+  color: #f5f7fa;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 16px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(56,198,255,0.05);
+}
+nav a:hover {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(56,198,255,0.15);
+}
+
+/* Hero section styles */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 16px 56px 16px;
+  text-align: center;
+  position: relative;
+}
+.hero-section img {
+  border-radius: 50%;
+  border: 5px solid #38c6ff;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 24px rgba(56,198,255,0.18), 0 2px 8px rgba(44, 62, 80, 0.20);
+  background: #fff;
+}
+.hero-section h1 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(56,198,255,0.10);
+}
+/* Make the tagline in the hero section white */
+.tagline {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  text-shadow: 0 1px 4px rgba(56,198,255,0.10);
+}
+.hero-btn {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 28px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 16px rgba(56,198,255,0.18);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  margin-top: 14px;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+.hero-btn:hover {
+  background: linear-gradient(90deg, #4f8cff 0%, #38c6ff 100%);
+  box-shadow: 0 8px 32px rgba(56,198,255,0.22);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Main section styles */
+.main-section {
+  background: rgba(36, 39, 41, 0.92);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(56,198,255,0.10);
+  padding: 36px 28px;
+  margin: 36px auto;
+  max-width: 750px;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add a subtle border for modern look */
+  border: 1.5px solid rgba(56,198,255,0.13);
+  backdrop-filter: blur(2px);
+}
+.main-section h2 {
+  color: #38c6ff;
+  margin-bottom: 16px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(56,198,255,0.10);
+}
+.main-section h3 {
+  color: #4f8cff;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main-section p, .main-section li {
+  color: #e3eafc;
+  font-size: 1.08rem;
+  text-align: center;
+}
+
+/* Favorite websites list */
+.main-section ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  list-style: none;
+}
+.main-section a {
+  color: #38c6ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.main-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Projects list styles */
+.projects-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Make project cards pop with a brighter gradient and glow */
+.project-card {
+  background: linear-gradient(120deg, #38c6ff 0%, #4f8cff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(56,198,255,0.18), 0 2px 8px rgba(44, 62, 80, 0.10);
+  padding: 24px 22px;
+  width: 92%;
+  max-width: 520px;
+  text-align: center;
+  border: 2px solid #fff;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+  /* Add a subtle glow effect */
+  filter: drop-shadow(0 0 12px #38c6ff88);
+}
+.project-card:hover {
+  box-shadow: 0 12px 48px #4f8cff88, 0 4px 16px rgba(56,198,255,0.22);
+  transform: translateY(-3px) scale(1.04);
+  background: linear-gradient(120deg, #4f8cff 0%, #38c6ff 100%);
+}
+
+.project-card h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 0 2px 8px #23252655;
+}
+.project-card p {
+  color: #e3eafc;
+  margin: 0 0 12px 0;
+}
+.project-card a {
+  background: #fff;
+  color: #38c6ff;
+  padding: 8px 22px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px #4f8cff33;
+  border: none;
+  font-weight: bold;
+}
+.project-card a:hover {
+  background: #232526;
+  color: #fff;
+  box-shadow: 0 4px 16px #38c6ff55;
+}
+
+/* Skills table styles */
+.skills-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.skills-table td {
+  border: none;
+  background: none;
+  padding: 16px 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Skill icon styles */
+.skill-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+  margin-right: 4px;
+}
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #38c6ff;
+  box-shadow: 0 2px 8px rgba(56,198,255,0.13);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-icon:hover {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 4px 16px rgba(56,198,255,0.18);
+}
+
+/* Skill bubble styles - all bubbles have the same size */
+.skill-bubble {
+  background: linear-gradient(90deg, #232526 0%, #2d3a4b 100%);
+  color: #38c6ff;
+  padding: 16px 32px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 40px;
+  max-width: 150px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(56,198,255,0.08);
+  border: 2px solid #38c6ff; /* 2px border for each bubble */
+  transition: background 0.2s, color 0.2s;
+}
+.skill-bubble:hover {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  color: #fff;
+}
+
+/* Contact section styles */
+#contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+#contact li {
+  margin-bottom: 6px;
+}
+#contact a {
+  color: #38c6ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#contact a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Footer contact bar styles */
+.contact-footer {
+  width: 100%;
+  background: linear-gradient(90deg, #232526 0%, #38c6ff 60%, #4f8cff 100%);
+  padding: 22px 0 18px 0;
+  position: static;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -2px 16px rgba(56,198,255,0.13);
+  border-top: 2px solid #fff; /* White top border */
+  margin-top: 40px;
+}
+
+/* Contact footer label */
+.contact-footer-label {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Contact footer content styles */
+.contact-footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-footer a {
+  color: #fff;
+  background: rgba(36,39,41,0.85);
+  border-radius: 16px;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #4f8cff33;
+  border: none;
+  display: inline-block;
+}
+.contact-footer a:hover {
+  background: #38c6ff;
+  color: #232526;
+  box-shadow: 0 4px 16px #38c6ff55;
+}
+
+/* Remove extra bottom padding from body since footer is not fixed */
+body {
+  /* ...existing code... */
+  padding-bottom: 0;
+}
+
+/* Favorite websites sub-box styles */
+.favorite-websites-box {
+  background: linear-gradient(120deg, #38c6ff 0%, #4f8cff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(56,198,255,0.18), 0 2px 8px rgba(44, 62, 80, 0.10);
+  padding: 20px 22px 24px 22px;
+  width: 92%;
+  max-width: 420px;
+  margin: 22px auto 0 auto;
+  border: 2px solid #fff;
+  filter: drop-shadow(0 0 12px #38c6ff88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+.favorite-websites-box:hover {
+  box-shadow: 0 12px 48px #4f8cff88, 0 4px 16px rgba(56,198,255,0.22);
+  transform: translateY(-3px) scale(1.04);
+  background: linear-gradient(120deg, #4f8cff 0%, #38c6ff 100%);
+}
+.favorite-websites-box h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.28rem;
+  font-weight: bold;
+  text-align: center;
+}
+.favorite-websites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+.favorite-websites-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.favorite-website-btn {
+  background: #fff;
+  color: #38c6ff;
+  padding: 10px 28px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  box-shadow: 0 2px 8px #4f8cff33;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  min-width: 160px;
+  max-width: 200px;
+  width: 100%;
+  margin-left: 8px;
+}
+.favorite-website-btn:hover {
+  background: #232526;
+  color: #fff;
+  box-shadow: 0 4px 16px #38c6ff55;
+}
+.favorite-site-icon {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 0;
+  margin-bottom: -4px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 4px #23252633;
+  flex-shrink: 0;
+  border: 2px solid #38c6ff;
+}
