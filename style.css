@@ -19,17 +19,20 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(6px); /* Modern glass effect */
+  backdrop-filter: blur(6px);
 }
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 32px;
-  justify-content: center;
+  justify-content: space-between; /* Spread items out */
   align-items: center;
   height: 56px;
+  /* Leave 20% empty space on each side */
+  width: 60vw;           /* Buttons take up the middle 60% of nav bar */
+  min-width: 420px;      /* Prevents collapse on small screens */
+  margin: 0 auto;        /* Center the nav list in the nav bar */
 }
 nav a {
   text-decoration: none;
@@ -38,13 +41,18 @@ nav a {
   font-size: 1.1rem;
   padding: 8px 16px;
   border-radius: 16px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(56,198,255,0.05);
+  /* Remove background, border, and shadow for seamless look */
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: color 0.2s;
 }
 nav a:hover {
-  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  /* No background, border, or shadow on hover */
+  background: none;
   color: #fff;
-  box-shadow: 0 4px 16px rgba(56,198,255,0.15);
+  box-shadow: none;
+  border: none;
 }
 
 /* Hero section styles */
@@ -60,8 +68,8 @@ nav a:hover {
 .hero-section img {
   border-radius: 50%;
   border: 5px solid #38c6ff;
-  width: 130px;
-  height: 130px;
+  width: 180px;      /* Increased from 130px to 180px */
+  height: 180px;     /* Increased from 130px to 180px */
   object-fit: cover;
   margin-bottom: 22px;
   box-shadow: 0 4px 24px rgba(56,198,255,0.18), 0 2px 8px rgba(44, 62, 80, 0.20);
@@ -82,6 +90,7 @@ nav a:hover {
   margin-bottom: 22px;
   text-shadow: 0 1px 4px rgba(56,198,255,0.10);
 }
+/* Contact Me button with white border */
 .hero-btn {
   background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
   color: #fff;
@@ -94,7 +103,7 @@ nav a:hover {
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   margin-top: 14px;
   display: inline-block;
-  border: none;
+  border: 2px solid #fff; /* Add white border */
   outline: none;
 }
 .hero-btn:hover {
@@ -443,4 +452,12 @@ body {
   box-shadow: 0 1px 4px #23252633;
   flex-shrink: 0;
   border: 2px solid #38c6ff;
+}
+
+/* Make bio and location text in About section bigger */
+#about p {
+  font-size: 1.22rem;
+  color: #e3eafc;
+  text-align: center;
+  margin: 8px 0;
 }
